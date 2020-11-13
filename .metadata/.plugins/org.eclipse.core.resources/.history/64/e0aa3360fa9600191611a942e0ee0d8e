@@ -1,0 +1,24 @@
+
+package Arroyo6;
+
+import java.util.Scanner;
+
+public class Hex {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println(" Enter a Hexadecimal: ");
+		String hex = input.nextLine();
+		
+		int baseTen = Integer.parseInt(hex, 16);
+		System.out.println("Base 10: "+ baseTen);
+
+		String binary = Integer.toBinaryString(baseTen);
+		System.out.println("Binary: "+binary);
+
+		int basetenagain = Integer.parseInt((binary), 2);
+		System.out.println("Base 10: "+ basetenagain);
+
+	}
+	
+}

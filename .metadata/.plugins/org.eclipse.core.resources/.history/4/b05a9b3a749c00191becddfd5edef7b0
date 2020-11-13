@@ -1,0 +1,23 @@
+package Arroyo2;
+
+public class ArraySearch {
+
+	public static void main(String[] args) {		
+		int[] intArray = new int[]{ 1,2,3,4,5,6,7,8,9,10 };//init array of 10 values
+		int index = returnIndex(intArray, 3); //call method to go through array and find the index of the given value
+		 System.out.println("Index: " + index);
+	}
+	
+	public static int returnIndex(int[ ] haystack, int needle) {
+		int index = 0;
+		
+		for (int i = 0; i < haystack.length; i++) {//iterate as many elements as there are in the array
+			if(haystack[i] ==  needle) { // if found return the index
+				return i;
+			}
+		}
+		
+		return index;
+	}
+
+}

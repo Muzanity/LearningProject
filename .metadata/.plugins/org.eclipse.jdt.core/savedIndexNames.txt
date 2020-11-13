@@ -1,0 +1,8 @@
+INDEX VERSION 1.131+C:\Users\Chrystal\Desktop\COP2250\Arroyo1and2\.metadata\.plugins\org.eclipse.jdt.core
+580009637.index
+637532860.index
+3797591253.index
+3147525919.index
+1392036394.index
+3432800137.index
+1435831859.index

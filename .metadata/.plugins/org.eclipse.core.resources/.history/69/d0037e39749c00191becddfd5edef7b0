@@ -1,0 +1,62 @@
+package Arroyo2;
+
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class Read {
+
+	public static void main(String[] args) {
+
+		try {
+			//call method to read from text file
+			readFromFile();
+		} catch (IOException e) {
+			//catch any exception
+			e.printStackTrace();
+		}
+	}
+
+	public static void readFromFile() throws IOException {
+
+		//init streams with null
+		InputStream stream = null;
+		DataInputStream input = null;
+		
+		try {
+			//open stream
+			stream = new FileInputStream("test.txt");
+
+			//make DataInputStream to pull from stream
+			input = new DataInputStream(stream);
+			
+			
+			double sum = 0;
+			while(input.available()>0) { //loops runs while there is data available in the file
+				double c = input.readDouble();
+				System.out.println(c + " ");
+				sum += c;
+			}
+			//summation
+			System.out.println("The total is: "+sum);
+
+
+		} catch(Exception e) {
+			e.printStackTrace();
+			//catch any exception, even stream
+		} finally {
+			if(stream!=null) {
+				stream.close();
+				//end resource usage
+			}
+			if(input!=null) {
+				input.close();
+				//end resource usage
+			}
+
+		}
+
+	}
+
+}
